@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace MvcMovie.Controllers
 {
@@ -22,6 +21,8 @@ namespace MvcMovie.Controllers
         //If passing something to a view you must use an ActionResult
         public ActionResult Welcome(string name, int numTimes = 1)
         {
+
+            //ViewBag is a dynamic object, which means you can put whatever you want in to it; the ViewBag object has no defined properties until you put something inside it.
             ViewBag.Message = "Hello " + name;
             ViewBag.NumTimes = numTimes;
 
